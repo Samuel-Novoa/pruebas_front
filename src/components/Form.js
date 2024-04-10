@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { getFieldLabel, getFieldPlaceholder, getFieldUnit } from './FormUtils';
 import { useFormState } from './FormDataUtils';
 import NavigationBar from './NavigationBar';
+import Simulador from './Simulador';
 
 const Form = () => {
   const { formData, emptyFields, showAlert, handleInputChange, handleCalculate, setShowAlert } = useFormState();
@@ -15,7 +16,7 @@ const Form = () => {
         <>
           <NavigationBar setCurrentPage={setCurrentPage} />
           
-          <div className='bg-white rounded-lg shadow-lg p-8 max-w-3xl w-full'>
+          {/* <div className='bg-white rounded-lg shadow-lg p-8 max-w-3xl w-full'>
             <h1 className='text-4xl font-semibold mb-8 text-trigo'>Ingresar Datos </h1>
 
             <div className='grid grid-cols-3 gap-8'>
@@ -48,7 +49,8 @@ const Form = () => {
                 </div>
               </div>
             )}
-          </div>
+          </div> */}
+          <Simulador/>
         </>
       )}
     </div>

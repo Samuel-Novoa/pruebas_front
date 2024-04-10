@@ -10,7 +10,8 @@ const NavigationBar = ({ setCurrentPage }) => {
   return (
     <nav className="nav text-black py-4 fixed top-0 w-full z-10">
       <div className="max-w-7xl mx-auto px-4 flex justify-between items-center">
-        <div className="text-2xl font-bold text">si</div>
+        <div className="text-2xl font-bold text">DRYTECH
+        </div>
         <div className="flex">
           <button className="mx-2 font-bold btn-login" onClick={() => handleNavigation('inicio')}>
             Inicio

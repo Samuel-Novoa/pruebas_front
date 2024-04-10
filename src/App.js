@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import Form from './components/Form';
+import Simulador from './components/Simulador';
+import NavigationBar from './components/NavigationBar';
+
 
 function App() {
   const [currentPage, setCurrentPage] = useState('login');
@@ -9,15 +12,20 @@ function App() {
   };
 
   return (
-    <div className="h-screen flex items-center justify-center">
+    <div>
       {currentPage === 'login' && (
-        <div className="text-center">
-          <button onClick={handleLoginClick} className="btn-login">
-            Ingresar
-          </button>
-        </div>
+        // <div className="text-center">
+        //   <button onClick={handleLoginClick} className="btn-login">
+        //     Ingresar
+        //   </button>
+        // </div>
+        <>
+          <NavigationBar setCurrentPage={setCurrentPage} />
+          <Simulador />
+        </>
       )}
       {currentPage === 'form' && <Form />}
+      {/* <Simulador/> */}
     </div>
   );
 }
